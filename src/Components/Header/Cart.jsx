@@ -1,8 +1,10 @@
 import React from 'react';
 import './Cart.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-const Cart = ({cart}) => {
-    console.log(cart)
+const Cart = ({cart,handelClearCart}) => {
+    // console.log(cart)
     let total =0;
     let totalShiping =0;
     let quantity = 0;
@@ -11,7 +13,7 @@ const Cart = ({cart}) => {
         total=total+product.price*product.quantity;
         totalShiping =totalShiping+product.shipping
         quantity = quantity + product.quantity;
-        console.log(total);
+        // console.log(total);
     }
     const tax =total*7/100
     const grandTotal = (total+tax+totalShiping).toFixed(2);
@@ -23,6 +25,9 @@ const Cart = ({cart}) => {
                 <h3>shippinh cost:{totalShiping}</h3>
                 <h3>tax:{tax}</h3>
                 <h2>Grand total :{grandTotal}</h2>
+                <button className='btn-clear-cart' onClick={handelClearCart}>
+                    <span>clear cart</span><FontAwesomeIcon icon={faTrash} />
+                </button>
         </div>
     );
 };

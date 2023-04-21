@@ -36,9 +36,13 @@ const [cart,setCart]=useState([])
 const handelAddToCart = (product)=>{
     const newCart = [...cart,product];
     setCart(newCart)
-    addToDb(product.id)
-    
+    addToDb(product.id)   
 }
+const handelClearCart =()=>{
+    setCart([]);
+    deleteShoppingCart();
+        }
+
     return (
         <div className='shop-container'>
             <div className='product-container'>
@@ -49,7 +53,8 @@ const handelAddToCart = (product)=>{
 
             </div>
             <div className='cart-container'>
-               <Cart cart={cart}></Cart>
+               <Cart cart={cart}
+               handelClearCart={handelClearCart}></Cart>
 
             </div>
         </div>

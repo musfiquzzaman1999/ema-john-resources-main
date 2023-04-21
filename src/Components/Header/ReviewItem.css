@@ -1,0 +1,36 @@
+.review-item{
+    width: 571px;
+    height: 107px;
+    border: 1px solid rgba(149, 160, 167, 1);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 8px;
+    display: flex;
+}
+
+.review-item img{
+    height: 91px;
+    width: 91px;
+    margin-top: 5px;
+    border-radius: 5px;
+} 
+
+.review-info p{
+    margin: 0px 10px;
+}
+
+.review-info h5{
+    margin: 0px 10px;
+}
+
+.review-info{
+    flex-grow: 1;
+    margin-top: 15px;
+}
+.delete-btn{
+    height: 55px;
+    width: 55px;
+    background-color: rgba(235, 87, 87, 1);
+    border-radius: 50%;
+    margin-top: 25px;
+}
