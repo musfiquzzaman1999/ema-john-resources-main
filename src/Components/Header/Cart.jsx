@@ -2,6 +2,7 @@ import React from 'react';
 import './Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const Cart = ({cart,handelClearCart}) => {
     // console.log(cart)
@@ -27,6 +28,9 @@ const Cart = ({cart,handelClearCart}) => {
                 <h2>Grand total :{grandTotal}</h2>
                 <button className='btn-clear-cart' onClick={handelClearCart}>
                     <span>clear cart</span><FontAwesomeIcon icon={faTrash} />
+                </button>
+                <button className='btn-clear-cart' >
+                    <Link to='/cheakout'><span>CheckOut</span> </Link>
                 </button>
         </div>
     );
